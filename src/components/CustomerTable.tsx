@@ -240,16 +240,16 @@ export const CustomerTable = ({ onAddCustomer, onAddBulkCustomers, onEditCustome
                 <TableCell className="font-medium">{index + 1}</TableCell>
                 <TableCell>
                   <div className="group relative">
-                    <div className="font-semibold text-lg bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent hover:from-green-600 hover:to-blue-600 transition-all duration-300 cursor-pointer transform hover:scale-105">
+                    <div className="font-semibold text-lg text-blue-300 hover:text-green-300 transition-all duration-300 cursor-pointer transform hover:scale-105">
                       {customer.customer_name || 'غير محدد'}
                     </div>
-                    <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-green-600 group-hover:w-full transition-all duration-300"></div>
+                    <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-green-400 group-hover:w-full transition-all duration-300"></div>
                   </div>
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-muted-foreground" />
-                    {String(customer.mobile_number)}
+                    <span className="text-foreground font-medium">{String(customer.mobile_number)}</span>
                   </div>
                 </TableCell>
                 <TableCell>
@@ -300,10 +300,10 @@ export const CustomerTable = ({ onAddCustomer, onAddBulkCustomers, onEditCustome
                   {customer.monthly_price ? (
                     <div className="flex items-center gap-2">
                       <DollarSign className="h-4 w-4 text-muted-foreground" />
-                      {customer.monthly_price} جنيه
+                      <span className="text-foreground font-medium">{customer.monthly_price} جنيه</span>
                     </div>
                   ) : (
-                    'غير محدد'
+                    <span className="text-muted-foreground">غير محدد</span>
                   )}
                 </TableCell>
                 <TableCell>{getRenewalStatusBadge(customer.renewal_status)}</TableCell>

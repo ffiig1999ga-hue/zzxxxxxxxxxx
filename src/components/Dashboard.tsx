@@ -70,7 +70,7 @@ export const Dashboard = () => {
         <Icon className="h-5 w-5 text-muted-foreground" />
       </CardHeader>
       <CardContent>
-        <div className="text-2xl font-bold">{value}</div>
+        <div className="text-2xl font-bold text-foreground">{value}</div>
       </CardContent>
     </Card>
   );
@@ -132,12 +132,12 @@ export const Dashboard = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-green-600">
+            <div className="text-3xl font-bold text-green-400">
               {stats.totalCustomers > 0 
                 ? Math.round((stats.paidCustomers / stats.totalCustomers) * 100)
                 : 0}%
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-gray-300">
               {stats.paidCustomers} من {stats.totalCustomers} عميل دفعوا
             </p>
           </CardContent>
@@ -151,12 +151,12 @@ export const Dashboard = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-blue-600">
+            <div className="text-3xl font-bold text-blue-400">
               {stats.totalCustomers > 0 
                 ? Math.round((stats.renewedCustomers / stats.totalCustomers) * 100)
                 : 0}%
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-gray-300">
               {stats.renewedCustomers} من {stats.totalCustomers} عميل جددوا
             </p>
           </CardContent>

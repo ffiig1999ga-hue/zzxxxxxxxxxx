@@ -154,31 +154,31 @@ export const UserDashboard = ({ userType, username }: UserDashboardProps) => {
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 text-muted-foreground" />
                   <span className="font-medium">رقم الموبايل:</span>
-                  <span className="text-blue-600 font-semibold">{customer.mobile_number}</span>
+                  <span className="text-blue-400 font-semibold">{customer.mobile_number}</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <Wifi className="h-4 w-4 text-muted-foreground" />
                   <span className="font-medium">نوع الخط:</span>
-                  <Badge variant="outline" className="bg-green-100 text-green-700 border-green-300">{customer.line_type} جيجا</Badge>
+                  <Badge variant="outline" className="bg-green-900/30 text-green-300 border-green-500">{customer.line_type} جيجا</Badge>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4 text-muted-foreground" />
                   <span className="font-medium">تاريخ الشحن:</span>
-                  <span className="text-purple-600 font-semibold">{formatDate(customer.charging_date)}</span>
+                  <span className="text-purple-400 font-semibold">{formatDate(customer.charging_date)}</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <Wifi className="h-4 w-4 text-muted-foreground" />
                   <span className="font-medium">مزود الخدمة:</span>
-                  <Badge variant="outline" className="bg-blue-100 text-blue-700 border-blue-300 capitalize">{customer.provider || 'غير محدد'}</Badge>
+                  <Badge variant="outline" className="bg-blue-900/30 text-blue-300 border-blue-500 capitalize">{customer.provider || 'غير محدد'}</Badge>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4 text-muted-foreground" />
                   <span className="font-medium">تاريخ التجديد:</span>
-                  <span className="text-orange-600 font-semibold">{formatRenewal(customer.charging_date, null)}</span>
+                  <span className="text-orange-400 font-semibold">{formatRenewal(customer.charging_date, null)}</span>
                 </div>
               </div>
             </CardContent>
